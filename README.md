@@ -22,6 +22,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Log into the VM with Remote Desktop
 - Within the VM (osticket-vm), download the osTicket-Installation-Files.zip and unzip it onto your desktop. The folder should be called “osTicket-Installation-Files”
   We will use the files in this folder to install osTicket and some of the dependencies.
+  https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD
 
 
 <h2>Installation Steps</h2>
