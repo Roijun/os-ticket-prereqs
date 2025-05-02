@@ -19,7 +19,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>List of Prerequisites</h2>
 
 - Create an Azure Virtual Machine Windows 10, 4 vCPUs
-    -Search for Viruals Machines within the Azure environment, and click on the first option.
+- -Search for Viruals Machines within the Azure environment, and click on the first option.
   ![(1) Create a VM](https://github.com/user-attachments/assets/a108536f-d5b8-4825-899f-5310d920a38e)
 
 - Log into the VM with Remote Desktop
