@@ -19,10 +19,13 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>List of Prerequisites</h2>
 
 - Create an Azure Virtual Machine Windows 10, 4 vCPUs
+
+<p>Within the Azure envirnoment, create a Virtual Machine(VM) with at least 8GB of RAM to house as the location for the osTicket installation process.  </p>
   
   ![(1) Create a VM](https://github.com/user-attachments/assets/a108536f-d5b8-4825-899f-5310d920a38e)
 
 - Log into the VM with Remote Desktop
+  <p>Use the Remote Desktop Protoccal </p>
   
   ![VM IP ADDRESS](https://github.com/user-attachments/assets/281ffd5f-79dc-4c83-b048-4ca738fc1353)
 ![RDP Login](https://github.com/user-attachments/assets/ec17df63-df47-4d51-a2e4-a1cd1f9815f7)
