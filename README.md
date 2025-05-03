@@ -18,7 +18,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Create an Azure Virtual Machine Windows 10, 4 vCPUs
+- Create an Azure Virtual Machine Windows 10
 
 <p>Within the Azure envirnoment, create a Virtual Machine(VM) with at least 8GB of RAM to house as the location for the osTicket installation process.  </p>
   
@@ -32,12 +32,12 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
   
 - Within the VM (osticket-vm), download the osTicket-Installation-Files.zip and unzip it onto your desktop. The folder should be called “osTicket-Installation-Files”
-  We will use the files in this folder to install osTicket and some of the dependencies.
+  We will use the files in this folder to install osTicket and some of the dependencies. Make sure to actually unzip the folders contents onto your Virtual Machine, otherwise you may run into issues later.
   https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD
 
 
 <h2>Installation Steps</h2>
-- Step one, Install / Enable IIS in Windows WITH CGI
+- Step One, Install / Enable IIS in Windows WITH CGI
 <p>We're going to install/enable ISS within windows with CGI enabled. To get to the ISS settings you need to navigate to the windows control panel and select programs. After selecting programs you need to select the 'Turn Windows features on or off' option, which will pull up the window which includes ISS and many other options.
   
 ![control panel, programs](https://github.com/user-attachments/assets/c15137ca-e54d-4e4e-af91-451b64cdd339)![Windows Features Breakdown](https://github.com/user-attachments/assets/f545e435-5f3e-424b-ad3e-22d39f01c354)
@@ -45,32 +45,13 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 Within that window find ISS, and check the box. Once it's expanded go ahead and go into the World Wide Web Services folder, and finally into the Application Development Features folder to find CGI. Make sure to select CGI before hitting Ok. That's the end of step one.</p>
 
+- Step Two, From the “osTicket-Installation-Files” folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi)
+![PHP manager](https://github.com/user-attachments/assets/bf0071ab-e1c9-4c7b-8d1e-94af2e751d7b)
 
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+This step is pretty straightforward, you just need to go into the folder and select 'PHPManagerForIIS_V1.5.0.msi'. The installation for this program is very simple, you just click 'Next, select 'I Agree', and select 'Next' before closing out the window.
 
-<p>
-<img src="https://i.imgur.com/chyaFyl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+-Step Three, From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+
 <br />
