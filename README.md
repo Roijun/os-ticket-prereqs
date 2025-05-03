@@ -38,7 +38,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Installation Steps</h2>
 - Step 1, Install / Enable IIS in Windows WITH CGI
-<p>We're going to install/enable IIS within windows with CGI enabled. To get to the IIS settings you need to navigate to the windows control panel and select programs. After selecting programs you need to select the 'Turn Windows features on or off' option, which will pull up the window which includes IIS and many other options.
+We're going to install/enable IIS within windows with CGI enabled. To get to the IIS settings you need to navigate to the windows control panel and select programs. After selecting programs you need to select the 'Turn Windows features on or off' option, which will pull up the window which includes IIS and many other options.
   
 ![control panel, programs](https://github.com/user-attachments/assets/c15137ca-e54d-4e4e-af91-451b64cdd339)![Windows Features Breakdown](https://github.com/user-attachments/assets/f545e435-5f3e-424b-ad3e-22d39f01c354)
 
@@ -46,6 +46,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 Within that window find ISS, and check the box. Make sure you actually check the box before expanding IIS for more features, otherwise there's potential for it to not show up when we are looking for it later on. Once it's expanded go ahead and go into the World Wide Web Services folder, and finally into the Application Development Features folder to find CGI. Make sure to select CGI before hitting Ok. That's the end of step one.</p>
 
 - Step 2, From the “osTicket-Installation-Files” folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi)
+- 
 ![PHP manager](https://github.com/user-attachments/assets/bf0071ab-e1c9-4c7b-8d1e-94af2e751d7b)
 
 This step is pretty straightforward, you just need to go into the folder and select 'PHPManagerForIIS_V1.5.0.msi'. The installation for this program is very simple, you just click 'Next, select 'I Agree', and select 'Next' before closing out the window.
@@ -119,10 +120,27 @@ We're going to go back into IIS and follow the dropwdown path that we followed p
 - php_imap.dll
 - php_intl.dll
 - php_opcache.dll
+After enabling the extensions you can refresh the window browser that holds our osTicket installation page to observe the changes on screen.
 
+![updatedextensions](https://github.com/user-attachments/assets/9dfce69b-25a3-459e-900a-f63c363030dd)
 
+- Step 13, We're going to rename a PHP file and assign permissions to the file within the osTicket folder that we renamed earlier.
 
+Within the directory 'C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php' rename the 'ost-sampleconfig.php' file to 'ost-config.php'.
 
+![ostconfig](https://github.com/user-attachments/assets/2e712147-b215-4f90-a834-3ce99c5877cf)
+
+Then we're going to change the permissions on the file. Right click it and select Properties > Security > Advanced. Within the advanced security settings click on disable inheritance in the bottom left. It will ask you what you want to do with the current permissions, go ahead and disable all of them. After getting rid of the permissions you'll want to click add in the bottom left, select 'Select a principal' from the top of the window.
+
+![permissions](https://github.com/user-attachments/assets/5fa73550-459c-4562-a730-134a5ab67cf3)
+
+For the User or Group you'll want to type in 'everyone' and assign full control. Once done you can hit apply, and close out the window after hitting ok.
+
+- Step 14, Continue setting up osTicket in the browser
+
+![Settings section](https://github.com/user-attachments/assets/e73e9088-7a3a-4017-a240-5a2259539665)
+
+Under the System Settings, the Helpdesk name can be whatever you want, for example 'Mcdonalds Help Desk'. The email is the email address that will be receiving emails from customers. If you're doing the setup and installation process as a form of training these matter less. Part of the Admin User information will be used to sign into the osTicket system later on as an admin, so it's important to record the username and password that you enter for these for future use. The database settings will be filled out here in the near future, so there's no need to worry about them for now.
 
 
 
