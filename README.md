@@ -25,7 +25,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
   ![(1) Create a VM](https://github.com/user-attachments/assets/a108536f-d5b8-4825-899f-5310d920a38e)
 
 - Log into the VM with Remote Desktop
-  <p>Use the Remote Desktop Protoccal </p>
+  <p>We'll use the Remote Desk Protocol program within our windows system to connect to our virtual machine. All you need it to copy the public IP Address from the virtual machine that we created, and paste it into the RDP program to initialize the connection. </p>
   
   ![VM IP ADDRESS](https://github.com/user-attachments/assets/281ffd5f-79dc-4c83-b048-4ca738fc1353)
 ![RDP Login](https://github.com/user-attachments/assets/ec17df63-df47-4d51-a2e4-a1cd1f9815f7)
@@ -78,11 +78,11 @@ Open up the 'osTicket-Installation-Files' folder and double click the VC_redist.
 
 - Step 7, From the “osTicket-Installation-Files” folder, install MySQL 5.5.62 (mysql-5.5.62-win32.msi)
 
-Open up the 'osTicket-Installation-Files' folder and double click the 'mysql-5.5.62-win32.msi' file. Once the installtion window has opened you'll want to hit 'Next', agree to the terms and conditions, and hit 'Next' again. The window will prompt you with the setup type, we'll go ahead and choose the typical setup before continuing on with the 'Next' button.
+Open up the 'osTicket-Installation-Files' folder and double click the 'mysql-5.5.62-win32.msi' file. Once the instalation window has opened you'll want to hit 'Next', agree to the terms and conditions, and hit 'Next' again. The window will prompt you with the setup type, we'll go ahead and choose the typical setup before continuing on with the 'Next' button.
 
 ![MYSQL](https://github.com/user-attachments/assets/125d446e-f94f-4754-a6f7-e62f81e3f3bc)
 
-Next you'll click on 'Install'. Once it's done click 'Finsih', and it will open the Server Instance Configuration Window. Select 'Next' and you'll be prompted with two options, detailed configuration and standard configuration. We're going to go ahead and select the standard configuration here before hitting 'Next'. You'll want to hit 'Next' one more time before you'll be prompted with the window where you decide what you're SQL password will be. We'll use this password later on to link up our SQL with the osTicket application, so make sure to note it somewhere accessible. Enter your password and proceed with 'Next'. The server instance should be ready to execute, select the 'Execute' option. It will execute the configuration before prompting you with the last window, just select 'Finish' to complete the process.
+Next you'll click on 'Install'. Once it's done click 'Finsih', and it will open the Server Instance Configuration Window. Select 'Next' and you'll be prompted with two options, detailed configuration and standard configuration. We're going to go ahead and select the standard configuration here before hitting 'Next'. You'll want to hit 'Next' one more time before you'll be prompted with the window where you decide what your SQL password will be. We'll use this password later on to link up our SQL database with the osTicket application, so make sure to note it somewhere accessible. Enter your password and proceed with 'Next'. The server instance should be ready to execute, select the 'Execute' option. It will execute the configuration before prompting you with the last window, just select 'Finish' to complete the process.
 
 - Step 8, Open IIS as an Admin
 
@@ -97,6 +97,31 @@ Within the IIS program you'll want to select the PHP Manager option. Once it's o
 ![PHP MANGER](https://github.com/user-attachments/assets/84dc74d0-7d26-46e7-bd5d-3bbdded003c9)
 
 - Step 10, Install osTicket v1.15.8
+
+To install osTicket we need to go into the 'osTicket-Installation-Files' folder and unzip the 'osTicket-v1.15.8.zip' folder onto your desktop. Afterwards we need to go into that folder and copy the 'upload' folder from it's contents. We're going to paste the 'upload' folder that we copied into the directory 'c:\inetpub\wwwroot', and rename it from 'upload' to 'osTicket'. Make sure it's correctly named osTicket, otherwise the system will have issues trying to find the folder when searching for it in the future.
+
+![upload rename](https://github.com/user-attachments/assets/ab160244-5aa3-43ce-b648-6821894aceef)
+![osticketupdated vestion](https://github.com/user-attachments/assets/9e4598fd-8185-4d45-ac43-5fe5bc2098ab)
+
+- Step 11, Open osTicket through IIS
+
+If you already had IIS open, you'll want to close the application and reload it. Next you'll want to and click 'Stop', and then 'Start' from the options in the top right hand corner of the IIS window to allow the system to restart itself. Next you should be able to open the osTicket application by following the dropdown menus on the left hand side of the IIS application until you get to the osTicket folder.
+
+![dropdownmenus](https://github.com/user-attachments/assets/642c3129-843d-4f86-a55f-2bd763b89755)
+
+Once you reach the osTicket folder, click the folder, and on the right hand side you'll want to select the browse '*:80 (http)' option on the right hand side under 'Browse Folder'. If you did everything correctly the osTicket installer window should appear in a windows browser as seen below.
+
+![osticketinstaller](https://github.com/user-attachments/assets/c680a63f-e2f8-40c6-bced-1ef02a064e4f)
+
+- Step 12, Enable some extensions that aren't already enabled
+
+We're going to go back into IIS and follow the dropwdown path that we followed previously until we get back to the osTicket folder. Once selected we're going to double click on PHP Manager, and then click on 'Enable or disable an extension'. Within that list there's 3 extensions that we are going to enable.
+- php_imap.dll
+- php_intl.dll
+- php_opcache.dll
+
+
+
 
 
 
