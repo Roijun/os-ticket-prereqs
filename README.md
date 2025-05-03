@@ -52,6 +52,17 @@ This step is pretty straightforward, you just need to go into the folder and sel
 
 -Step Three, From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)
 
+Installing these modules is what is going to allow us to run and use osTicket, the installation for many of them is similar, and might feel a bit repetitive. But I assure you it is very necessary to have osTicket functioning properly within our Virtual Machine. Next is the Rewrite Module, within the same 'osTicket-Installation-Files' folder select the 'rewrite_amd64_en-US.msi' option.
+
+![ReWriteModle](https://github.com/user-attachments/assets/7009612d-5a83-4f74-8b31-bb120b748b10)
+
+Once It's opened checked the box agreeing to the terms in the Licesnse Agreement, and click install. It will take a second before prompting you with the option to 'Finish', concluding the installation process.
+
+-Step Four, Create the directory C:\PHP
+
+This step gives us a place to store our files in the upcoming step. You'll want to open up file explorer and navigate to 'This PC' then on to the local C drive 'Windows(C:)'. Here you'll want to create a new folder and name it 'PHP'.
+
+![PHP --](https://github.com/user-attachments/assets/1eb84b17-e6da-48ed-b2dd-2e8d342a4a2a)
 
 
 <br />
