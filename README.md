@@ -37,20 +37,20 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 
 <h2>Installation Steps</h2>
-- Step One, Install / Enable IIS in Windows WITH CGI
-<p>We're going to install/enable ISS within windows with CGI enabled. To get to the ISS settings you need to navigate to the windows control panel and select programs. After selecting programs you need to select the 'Turn Windows features on or off' option, which will pull up the window which includes ISS and many other options.
+- Step 1, Install / Enable IIS in Windows WITH CGI
+<p>We're going to install/enable IIS within windows with CGI enabled. To get to the IIS settings you need to navigate to the windows control panel and select programs. After selecting programs you need to select the 'Turn Windows features on or off' option, which will pull up the window which includes IIS and many other options.
   
 ![control panel, programs](https://github.com/user-attachments/assets/c15137ca-e54d-4e4e-af91-451b64cdd339)![Windows Features Breakdown](https://github.com/user-attachments/assets/f545e435-5f3e-424b-ad3e-22d39f01c354)
 
 
-Within that window find ISS, and check the box. Once it's expanded go ahead and go into the World Wide Web Services folder, and finally into the Application Development Features folder to find CGI. Make sure to select CGI before hitting Ok. That's the end of step one.</p>
+Within that window find ISS, and check the box. Make sure you actually check the box before expanding IIS for more features, otherwise there's potential for it to not show up when we are looking for it later on. Once it's expanded go ahead and go into the World Wide Web Services folder, and finally into the Application Development Features folder to find CGI. Make sure to select CGI before hitting Ok. That's the end of step one.</p>
 
-- Step Two, From the “osTicket-Installation-Files” folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi)
+- Step 2, From the “osTicket-Installation-Files” folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi)
 ![PHP manager](https://github.com/user-attachments/assets/bf0071ab-e1c9-4c7b-8d1e-94af2e751d7b)
 
 This step is pretty straightforward, you just need to go into the folder and select 'PHPManagerForIIS_V1.5.0.msi'. The installation for this program is very simple, you just click 'Next, select 'I Agree', and select 'Next' before closing out the window.
 
-- Step Three, From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)
+- Step 3, From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)
 
 Installing these modules is what is going to allow us to run and use osTicket, the installation for many of them is similar, and might feel a bit repetitive. But I assure you it is very necessary to have osTicket functioning properly within our Virtual Machine. Next is the Rewrite Module, within the same 'osTicket-Installation-Files' folder select the 'rewrite_amd64_en-US.msi' option.
 
@@ -58,11 +58,47 @@ Installing these modules is what is going to allow us to run and use osTicket, t
 
 Once It's opened checked the box agreeing to the terms in the Licesnse Agreement, and click install. It will take a second before prompting you with the option to 'Finish', concluding the installation process.
 
-- Step Four, Create the directory C:\PHP
+- Step 4, Create the directory C:\PHP
 
 This step gives us a place to store our files in the upcoming step. You'll want to open up file explorer and navigate to 'This PC' then on to the local C drive 'Windows(C:)'. Here you'll want to create a new folder and name it 'PHP'.
 
 ![PHP --](https://github.com/user-attachments/assets/1eb84b17-e6da-48ed-b2dd-2e8d342a4a2a)
+
+- Step 5, From the “osTicket-Installation-Files” folder, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder
+
+Click on the 'php-7.3.8-nts-Win32-VC15-x86.zip' and select the extract button at the top of the file explorer. Once selected the 'Extract All' option should appear at the top of the file explorer. Select it and click the 'Browse' option. You'll want to navigate to the location of the PHP folder that we created in the last step and select that as the destination for the zipped contents before hitting 'Extract'.
+
+![php extraction zipper](https://github.com/user-attachments/assets/18552a1e-6558-4cb6-88d1-eff8141b976f)
+
+- Step 6, From the “osTicket-Installation-Files” folder, install VC_redist.x86.exe.
+
+Open up the 'osTicket-Installation-Files' folder and double click the VC_redist.x86.exe file. Check the box agreeing to the terms and conditions before selecting 'Install'. The setup should be successful and present you with the option to close the window.
+
+![VCREDIST](https://github.com/user-attachments/assets/9638c7cb-4f63-4ff2-87b9-d7550edc3930)
+
+- Step 7, From the “osTicket-Installation-Files” folder, install MySQL 5.5.62 (mysql-5.5.62-win32.msi)
+
+Open up the 'osTicket-Installation-Files' folder and double click the 'mysql-5.5.62-win32.msi' file. Once the installtion window has opened you'll want to hit 'Next', agree to the terms and conditions, and hit 'Next' again. The window will prompt you with the setup type, we'll go ahead and choose the typical setup before continuing on with the 'Next' button.
+
+![MYSQL](https://github.com/user-attachments/assets/125d446e-f94f-4754-a6f7-e62f81e3f3bc)
+
+Next you'll click on 'Install'. Once it's done click 'Finsih', and it will open the Server Instance Configuration Window. Select 'Next' and you'll be prompted with two options, detailed configuration and standard configuration. We're going to go ahead and select the standard configuration here before hitting 'Next'. You'll want to hit 'Next' one more time before you'll be prompted with the window where you decide what you're SQL password will be. We'll use this password later on to link up our SQL with the osTicket application, so make sure to note it somewhere accessible. Enter your password and proceed with 'Next'. The server instance should be ready to execute, select the 'Execute' option. It will execute the configuration before prompting you with the last window, just select 'Finish' to complete the process.
+
+- Step 8, Open IIS as an Admin
+
+In the bottom left search bar if you type IIS the Internet Information Services program should appear, make sure to run it as an administrator. Below is what it should look like once opened.
+
+![Internet Information Services](https://github.com/user-attachments/assets/231eff41-0f62-42c9-80a0-ab20a8d15ca2)
+
+- Step 9, Register PHP from within IIS (PHP Manager -> C:\PHP\php-cgi.exe)
+
+Within the IIS program you'll want to select the PHP Manager option. Once it's opened, under PHP Setup you should see 'Register new PHP version' on the bottom left. You'll want to click on that, which will open up the window from which you'll select the path for the actual PHP executeable. Click on 'browse' and make you're way to the PHP folder we created earlier. Within that folder at the very bottom there should be the PHP executable, labeled as 'php-cgi'. Select that option and hit 'Ok'. You're PHP version should now be registered. 
+
+![PHP MANGER](https://github.com/user-attachments/assets/84dc74d0-7d26-46e7-bd5d-3bbdded003c9)
+
+- Step 10, Install osTicket v1.15.8
+
+
 
 
 <br />
