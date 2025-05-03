@@ -50,7 +50,7 @@ Within that window find ISS, and check the box. Once it's expanded go ahead and 
 
 This step is pretty straightforward, you just need to go into the folder and select 'PHPManagerForIIS_V1.5.0.msi'. The installation for this program is very simple, you just click 'Next, select 'I Agree', and select 'Next' before closing out the window.
 
--Step Three, From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)
+- Step Three, From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)
 
 Installing these modules is what is going to allow us to run and use osTicket, the installation for many of them is similar, and might feel a bit repetitive. But I assure you it is very necessary to have osTicket functioning properly within our Virtual Machine. Next is the Rewrite Module, within the same 'osTicket-Installation-Files' folder select the 'rewrite_amd64_en-US.msi' option.
 
@@ -58,7 +58,7 @@ Installing these modules is what is going to allow us to run and use osTicket, t
 
 Once It's opened checked the box agreeing to the terms in the Licesnse Agreement, and click install. It will take a second before prompting you with the option to 'Finish', concluding the installation process.
 
--Step Four, Create the directory C:\PHP
+- Step Four, Create the directory C:\PHP
 
 This step gives us a place to store our files in the upcoming step. You'll want to open up file explorer and navigate to 'This PC' then on to the local C drive 'Windows(C:)'. Here you'll want to create a new folder and name it 'PHP'.
 
