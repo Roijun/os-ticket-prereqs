@@ -110,7 +110,7 @@ If you already had IIS open, you'll want to close the application and reload it.
 
 ![dropdownmenus](https://github.com/user-attachments/assets/642c3129-843d-4f86-a55f-2bd763b89755)
 
-Once you reach the osTicket folder, click the folder, and on the right hand side you'll want to select the browse '*:80 (http)' option on the right hand side under 'Browse Folder'. If you did everything correctly the osTicket installer window should appear in a windows browser as seen below.
+Once you reach the osTicket folder, click the folder, and on the right hand side you'll want to select the browse '*:80 (http)' option under 'Browse Folder'. If you did everything correctly the osTicket install window should appear in a windows browser as seen below.
 
 ![osticketinstaller](https://github.com/user-attachments/assets/c680a63f-e2f8-40c6-bced-1ef02a064e4f)
 
@@ -140,8 +140,27 @@ For the User or Group you'll want to type in 'everyone' and assign full control.
 
 ![Settings section](https://github.com/user-attachments/assets/e73e9088-7a3a-4017-a240-5a2259539665)
 
-Under the System Settings, the Helpdesk name can be whatever you want, for example 'Mcdonalds Help Desk'. The email is the email address that will be receiving emails from customers. If you're doing the setup and installation process as a form of training these matter less. Part of the Admin User information will be used to sign into the osTicket system later on as an admin, so it's important to record the username and password that you enter for these for future use. The database settings will be filled out here in the near future, so there's no need to worry about them for now.
+Under the System Settings, the Helpdesk name can be whatever you want, for example 'CompanyEx Help Desk'. The email is the destination for customer sent emails. If you're doing the setup and installation process as a form of training these matter less. Part of the Admin User information will be used to sign into the osTicket system later on as an admin, so it's important to record the username and password that you enter for these for future use. The database settings will be filled out here in the near future, so there's no need to worry about them for now.
 
+- Step 15, Install HeidiSQL and create a database
+
+The next step is to install our SQL database, necessary for the background storing of information within the osTicket application. From the “osTicket-Installation-Files” we're going to doouble click on the Heidi SQL. You'll initially be prompted with a license agreement, hit 'accept' and continue on with 'next'. The next screen will ask you to choose the installation location for the program, this can be left as default. You'll want to go through the next 3 windows hitting 'next' until you're able to hit 'finish' and 'install'. Once HeidiSQL finishes installing and opens, we're going to create our database. Hit the 'New' green plus button on the bottom left.
+
+![HeidiSQL](https://github.com/user-attachments/assets/a32da6f7-04d1-4c7e-b0a6-12c0d12620e6)
+
+Here you'll be prompted to enter the password which we previously used when installing and setting up MySQL in step 7. Enter the password you used and click on 'open'. Now we can go ahead and create our database. You'll want to right click on the bold 'Unamed' header at the top, go down to 'Create New', and click on 'Database'. The name for the database must be 'osTicket', otherwise the system will have trouble trying to integrate osTicket and SQL. After finishing that step we can return to our osTicket setup page.
+
+- Step 16, Finish Setting up osTicket within the browser
+
+We'll finish out the osTicket browser setup by filling out the information at the bottom under 'Database Settings'. For the database name we need to make it match what we typed in earlier into the SQL database, so we'll want to enter 'osTicket' here. The password and username also needs to match what we entered during the SQL setup steps. I left the password and username as 'root' for simplicity sake, so that's what I enter during this step. 
+
+![database settings](https://github.com/user-attachments/assets/7bd4b686-9b97-417e-9e61-409863810d22)
+
+Once completed we can go ahead and click on install. If there were no errors made in any of the previous steps we should reach a congratulations page within the osTicket browser and be completed with the osTicket installation process!
+
+![congratulations](https://github.com/user-attachments/assets/68d59f04-31ee-4cab-9990-373e9aec6882)
+
+At the bottom of the page there are two links for you to use, one is a link for end users to go in and make tickets for any current problems they may be experiencing, and the other is a link for admins and helpdesk employees to log in to work those said tickets.
 
 
 <br />
