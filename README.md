@@ -35,6 +35,9 @@ This tutorial outlines the prerequisites and installation of the open-source hel
   We will use the files in this folder to install osTicket and some of the dependencies. Make sure to actually unzip the folders contents onto your Virtual Machine, otherwise you may run into issues later.
   https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD
 
+<h2>Overview</h2>
+
+In this walkthrough we'll be going through the process of downloading and installing osTicket and all of it's dependencies so we can understand the process and set ourselves up for our future walkthroughs within the osTicket software.
 
 <h2>Installation Steps</h2>
 - Step 1, Install / Enable IIS in Windows WITH CGI
