@@ -163,7 +163,9 @@ Once completed we can go ahead and click on install. If there were no errors mad
 
 ![congratulations](https://github.com/user-attachments/assets/68d59f04-31ee-4cab-9990-373e9aec6882)
 
-At the bottom of the page there are two links for you to use, one is a link for end users to go in and make tickets for any current problems they may be experiencing, and the other is a link for admins and helpdesk employees to log in to work those said tickets. If you're going to continue with the rest of the osTicket walkthroughs on my profile and cannot do them in one sitting, it's best to stop your virtual machine within the Azure envirnonment and start it again once you're able to continue. This just allows you to save money without losing your previous progress. 
+At the bottom of the page there are two links for you to use, one is a link for end users to go in and make tickets for any current problems they may be experiencing, and the other is a link for admins and helpdesk employees to log in to work those said tickets. This marks the end of the installation portion for osTicket, in the future walkthroughs we'll be setiing up and configuring osTicket for potential use of the system.
+
+If you're going to continue with the rest of the osTicket walkthroughs on my profile and cannot do them in one sitting, it's best to stop your virtual machine within the Azure envirnonment and start it again once you're able to continue. This just allows you to save money without losing your previous progress. 
 
 
 <br />
